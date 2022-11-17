@@ -1,0 +1,156 @@
+body {
+  font-family: 'Rubik', sans-serif;
+  margin: 0;
+  overflow-x: hidden;
+  text-align: center;
+  font-size: 18px;
+}
+
+.box {
+  background-image: url("images/pattern-bg.png");
+  height: 270px;
+  position: relative;
+  z-index: 2;
+}
+
+.heading {
+  margin-top: 0;
+  padding-top: 30px;
+  color: hsl(0, 0%, 100%);
+  font-weight: 400;
+}
+
+input[name="ip"] {
+  border-radius: 10px;
+  padding: 20px;
+  width: 460px;
+  font-size: 18px;
+  font-weight: 400;
+  color: hsl(0, 0%, 17%);
+  border: none;
+}
+
+button {
+  background-color: hsl(0, 0%, 17%);
+  padding: 23px;
+  display: inline-block;
+  margin-left: -55px;
+  border-radius: 0 10px 10px 0;
+  border: none;
+}
+
+button:hover {
+  background-color: hsl(0, 0%, 59%);
+}
+
+input[name="ip"]:focus,
+input[name="ip"]:active {
+  outline: none;
+}
+
+::placeholder {
+  font-size: 18px;
+}
+
+/* .icon-box img{
+  padding: 20px;
+} */
+
+.info-box {
+  width: 80%;
+  margin: 40px auto;
+  padding: 10px;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  background-color: hsl(0, 0%, 100%);
+}
+
+.item {
+  margin: 30px 0;
+  padding: 0 20px;
+  border-right: 1px solid hsl(0, 0%, 59%);
+  flex-grow: 1;
+  text-align: left;
+}
+
+.item p {
+  color: hsl(0, 0%, 59%);
+  margin-top: -20px;
+  font-size: 13px;
+  font-weight: 700;
+}
+
+.item h2 {
+  font-weight: 700;
+  font-size: 26px;
+  margin-bottom: -5px;
+}
+
+.ip-box {
+  flex-basis: 13%;
+}
+
+.time-box {
+  flex-basis: 17%;
+}
+
+.loc-box {
+  flex-basis: 15%;
+}
+
+.isp-box {
+  flex-basis: 15%;
+  border-right: none;
+}
+
+#map {
+  position: relative;
+  height: 800px;
+  z-index: 1;
+}
+
+#map p {
+  display: none;
+}
+
+
+
+@media (max-width: 600px) {
+
+  h1 {
+    font-size: 25px; 
+  }
+
+  .box {
+    height: 300px;
+  }
+  input[name="ip"] {
+    width: 75%;
+    font-size: 14px;
+  }
+
+  ::placeholder {
+    font-size: 14px;
+  }
+
+  .info-box {
+    width: 70%;
+  }
+  .item {
+    flex-basis: 50%;
+    text-align: center;
+    margin: 10px 0;
+    border: none;
+  }
+
+  .item p {
+    margin-top: 0;
+    font-size: 10px;
+  }
+  .item h2{
+    font-size: 18px;
+  }
+}

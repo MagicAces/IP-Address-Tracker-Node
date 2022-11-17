@@ -1,0 +1,33 @@
+<%- include("header"); %>
+
+<div class="box">
+  <h1 class="heading">IP Address Tracker</h1>
+  <form class="search-box" action="/ip" method="post">
+    <input type="text" name="ip" placeholder="Search for any IP address or domain" autocomplete="off">
+    <button type="submit" click><img src="images/icon-arrow.svg" alt="icon-arrow.svg"></button>
+  </form>
+  <div class="info-box">
+    <div class="ip-box item">
+      <p>IP ADDRESS</p>
+      <h2> <%= ip %> </h2>
+    </div>
+    <div class="loc-box item">
+      <p>LOCATION</p>
+      <h2> <%= location %> </h2>
+    </div>
+    <div class="time-box item">
+      <p>TIMEZONE</p>
+      <h2> <%= timezone %> </h2>
+    </div>
+    <div class="isp-box item">
+      <p>ISP</p>
+      <h2> <%= isp %> </h2>
+    </div>
+  </div>
+</div>
+<div id="map">
+  <p class="lat"><%= lat %></p>
+  <p class="long"><%= long %></p>
+</div>
+
+<%- include("footer"); %>
