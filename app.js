@@ -50,6 +50,6 @@ app.post("/ip", function(req, res) {
   res.redirect("/");
 });
 
-app.listen(3000, function(req, res) {
+app.listen(process.env.PORT || 3000, function(req, res) {
   console.log("Server listening on 3000");
 });
