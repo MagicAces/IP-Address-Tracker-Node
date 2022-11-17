@@ -2,8 +2,9 @@
 
 <div class="box">
   <h1 class="heading">IP Address Tracker</h1>
-  <form class="search-box" action="/ip" method="post">
+  <form class="search-box" action="/" method="post">
     <input type="text" name="ip" placeholder="Search for any IP address or domain" autocomplete="off">
+    <p><%= valid %></p>
     <button type="submit" click><img src="images/icon-arrow.svg" alt="icon-arrow.svg"></button>
   </form>
   <div class="info-box">

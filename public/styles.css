@@ -32,9 +32,9 @@ input[name="ip"] {
 
 button {
   background-color: hsl(0, 0%, 17%);
-  padding: 23px;
+  padding: 22px;
   display: inline-block;
-  margin-left: -55px;
+  margin-left: -60px;
   border-radius: 0 10px 10px 0;
   border: none;
 }
@@ -46,12 +46,20 @@ button:hover {
 input[name="ip"]:focus,
 input[name="ip"]:active {
   outline: none;
+  border: none;
+}
+
+.wrong {
+  border: 3px solid red;
 }
 
 ::placeholder {
   font-size: 18px;
 }
 
+.search-box p {
+  display: none;
+}
 /* .icon-box img{
   padding: 20px;
 } */
@@ -121,7 +129,7 @@ input[name="ip"]:active {
 @media (max-width: 600px) {
 
   h1 {
-    font-size: 25px; 
+    font-size: 25px;
   }
 
   .box {

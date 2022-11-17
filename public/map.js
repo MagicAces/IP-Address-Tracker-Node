@@ -1,6 +1,14 @@
 let long = Number($(".long").text());
 let lat = Number($(".lat").text());
 
+let valid = $(".search-box p").text();
+if(valid === "false") {
+	$(".search-box input").css("border", "2px solid red");
+	$(".search-box input").click(function() {
+		$(".search-box input").css("border", "none");
+	});
+}
+
 console.log(long);
 console.log(lat);
 

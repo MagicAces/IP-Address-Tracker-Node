@@ -3,6 +3,7 @@ const request = require("request");
 const https = require("https");
 const bodyParser = require("body-parser");
 const ejs = require("ejs");
+const validate = require(__dirname + "/validate.js");
 
 const app = express();
 
@@ -39,15 +40,22 @@ app.get("/", function(req, res) {
   https.get(url, function(response) {
     response.on("data", function(data) {
       pushIPData(data);
-      res.render("index", {ip: details.ip, location: details.location, timezone: details.timezone, isp: details.isp, lat: details.lat, long: details.long});
+      res.render("index", {ip: details.ip, location: details.location, timezone: details.timezone, isp: details.isp, lat: details.lat, long: details.long, valid: "true"});
     });
   });
 });
 
-app.post("/ip", function(req, res) {
+app.post("/", function(req, res) {
   const ip = req.body.ip;
-  url += "&ipAddress=" + ip;
-  res.redirect("/");
+  if(validate.checkIfValidIP(ip)) {
+    url += "&ipAddress=" + ip;
+    res.redirect("/");
+  }
+  else {
+    res.render("index", {ip: details.ip, location: details.location, timezone: details.timezone, isp: details.isp, lat: details.lat, long: details.long, valid: "false"});
+  }
+
+
 });
 
 app.listen(process.env.PORT || 3000, function(req, res) {
