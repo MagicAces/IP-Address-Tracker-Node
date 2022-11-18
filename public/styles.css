@@ -142,6 +142,7 @@ input[name="ip"]:active {
 
   button {
     padding: 20px;
+    margin-left: -52px;
   }
 
   ::placeholder {
