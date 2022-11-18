@@ -32,9 +32,9 @@ input[name="ip"] {
 
 button {
   background-color: hsl(0, 0%, 17%);
-  padding: 22px;
+  padding: 23px;
   display: inline-block;
-  margin-left: -60px;
+  margin-left: -56px;
   border-radius: 0 10px 10px 0;
   border: none;
 }
@@ -138,6 +138,10 @@ input[name="ip"]:active {
   input[name="ip"] {
     width: 75%;
     font-size: 14px;
+  }
+
+  button {
+    padding: 20px;
   }
 
   ::placeholder {
