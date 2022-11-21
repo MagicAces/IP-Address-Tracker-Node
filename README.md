@@ -51,4 +51,4 @@ I learnt how to use CSS Flexbox for a responsive layout. I also incorporated exp
 ## Author
 
 - Frontend Mentor - [@yourusername](https://www.frontendmentor.io/profile/MagicAces)
-- Twitter - [@Isaac Oniti](https://www.twitter.com/yourusername)
+- Twitter - [@Isaac Oniti](https://www.twitter.com/IsaacOniti)
