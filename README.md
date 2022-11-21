@@ -27,7 +27,7 @@ Users should be able to:
 
 ### Links
 
-- Solution URL: [Add solution URL here](https://thisismyip.herokuapp.com)
+- Solution URL: https://thisismyip.herokuapp.com
 
 
 ## My process
